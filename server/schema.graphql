@@ -1,0 +1,160 @@
+scalar GraphQLDate
+
+type User {
+	_id: ID!
+	id: Int!
+	username:String!
+	password:String!
+	email: String!
+	name: String!
+	phone: String!
+	gender:String!
+	person:String! 
+}
+
+input UserInputs{
+	username:String!
+	password:String!
+	email: String!
+	name: String!
+	phone: String!
+	gender:String!
+	person:String!
+}
+
+input UserLogin{
+	username:String!
+	password:String!
+}
+
+type Book {
+  id: Int
+  title: String!
+  image:String
+  author: String
+  place: String
+  date: String
+  publisher: String
+  intro: String
+  location: String
+  total: Int
+  avail: Int
+}
+
+type Loan {
+	_id:ID!
+	id: Int
+    title: String!
+    reader: String!
+    loandate: GraphQLDate
+	returndate: GraphQLDate
+}
+
+
+input BookInput1s{
+    title: String!
+    author: String!
+	publisher: String!
+	number: Int!
+	image:String
+}
+
+input BookInputs {
+  id: Int
+  title: String!
+  image:String
+  author: String
+  place: String
+  date: String
+  publisher: String
+  intro: String
+  location: String
+  total: Int
+  avail: Int
+}
+
+
+input ReturnInputs{
+    title: String!
+	reader: String!
+}
+
+input UserUpdate {
+	username:String!
+	password:String
+	email: String
+	name: String
+	phone: String
+	gender:String
+	person:String!
+}
+
+input LoanInputs{
+	id: Int
+    title: String!
+	reader: String!
+	loandate: GraphQLDate
+	returndate: GraphQLDate
+
+}
+
+input ReviewInputs {
+  title:String!
+  name:String
+  content:String!
+  created:GraphQLDate
+}
+
+type Review {
+  title:String
+  name:String
+  content:String!
+  created:GraphQLDate!
+}
+
+type Oldbook {
+  _id:ID!
+  title:String!
+  image:String
+  contact:String!
+  price:String!
+  username:String!
+}
+
+input OldbookInput {
+  title:String!
+  image:String
+  contact:String!
+  price:String!
+  username:String
+}
+
+type Query {
+  about: String!
+  currentuser:[User!]!
+  userList:[User]!
+  bookList:[Book!]!
+  loanList:[Loan!]!
+  searchBook(book: BookInputs!): [Book!]!
+  reviewList(book: BookInputs!): [Review!]!
+  findOldBook(book: BookInputs!): [Oldbook!]!
+  oldbookList:[Oldbook!]!
+  myinfoList:[Oldbook!]!
+
+}
+
+type Mutation {
+  setAboutMessage(message: String!): String
+  userAdd(user: UserInputs!): User!
+  userLogin(user: UserLogin!): User
+  userUpdate(user: UserUpdate!):User
+  bookAdd(book: BookInput1s!): Book
+  bookDelete(book: BookInput1s!): Book
+  bookReturn(loan: ReturnInputs!):Loan
+  reviewAdd(review:ReviewInputs!):Review!
+  loanAdd(loan:LoanInputs!):Loan!
+  availDel(book: BookInputs!):Book
+  oldbookAdd(oldbook:OldbookInput!):Oldbook!
+  infoDel(oldbook:OldbookInput!):Oldbook
+  
+}

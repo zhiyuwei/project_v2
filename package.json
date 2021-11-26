@@ -1,0 +1,22 @@
+{
+  "main": "/home/project/server/server.js",
+  "scripts": {
+    "start": "nodemon -w server -e server.js",
+    "compile": "babel src --out-dir public",
+    "watch": "babel src --out-dir public --watch --verbose",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.25.3",
+    "express": "^4.17.1",
+    "graphql": "^0.13.2",
+    "mongodb": "^3.7.3",
+    "mysql": "^2.18.1",
+    "nodemon": "^1.19.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-react": "^7.16.0"
+  }
+}

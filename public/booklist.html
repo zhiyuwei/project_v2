@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Library Book List</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"></script>
+        <style>
+            div{
+                margin-bottom: 5px;
+            }
+            .detailblock{
+                margin-bottom: 20px;
+            }
+            .linkstep{
+                white-space:normal
+            }
+            .space{
+                position: relative;
+                left: 200px;
+            }
+            
+            .listbody{
+                display:flex; 
+                flex-direction:row;
+                position: relative;
+                left: 200px;
+                margin-bottom: 15px;
+                width: 900px;
+            }
+            .created{
+                margin-left: 200px;
+            }
+            .reviewcon{
+                width: 400px;
+                height: 100px;
+                text-align: left;
+            }
+            .bookcover{
+                margin-right: 30px;
+            }
+            .item-label{
+                font-weight: bold;
+            }
+            .title{
+                font-weight: bold;
+            }
+            .keywordInput{
+                text-align: center;
+                margin: 10px;
+            }
+            .introduction{
+                width: 500px;
+            }
+            .upperreview{
+                width: 700px;
+            }
+            .commentcontent{
+                border-style: solid;
+                border-color: cadetblue;
+                border-radius: 5px;
+                width: 700px;
+            }
+            .oldbookinfo{
+                border-style: solid;
+                border-color: slategray;
+                border-radius: 3px;
+                width: 200px;
+                float: left;
+                background: whitesmoke;
+                margin: 20px;
+            }
+            .detail_text{
+                position: relative;
+                left: 200px;
+                background: whitesmoke;
+                padding-left: 50px;
+            }
+            .applybutton{
+                height: 40px;
+            }
+            input[type=text]{
+                height: 40px;
+                width: 400px;
+                border-radius: 5px;
+            }
+            input[type=text]:focus{
+                border: black 2px;
+                background-color: rgb(181, 226, 164);
+            }
+            input[type=submit]{
+                height: 40px;
+                border-radius: 10px;
+                background: lightcyan;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <center><h1>University Library</h1></center>
+        <hr />
+        <div class="linkstep">
+        <span><a href="homepage.html">Home</a> > </span>  
+        <span>Book List</span>
+        </div>
+        <hr />
+        <!-- <div class="space"><hr /></div> -->
+        <div id="listbody" ></div>
+        <script src="/booklist.js"></script>
+        
+        <div class="space"><hr /></div>
+        
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>LOGIN</title>
+    <style>
+    *{
+    padding: 0;
+    margin: 0;
+    }
+    html{
+        height: 100%;
+    }
+    body{
+        height: 100%;
+        font-family: 'JetBrains Mono Medium';
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image:url('1.jpg');
+    }
+    .form-box{
+        width: 300px;
+        background-color: rgb(41,45,62);
+        color: #ffffff;
+        border-radius: 4px;
+        padding: 30px;
+    }
+    .form-box .header{
+        text-align: center;
+        font-size: 35px;
+        text-transform: uppercase;
+        line-height: 100px;
+    }
+
+    .form-box .input-box input{
+        background-color: rgb(41,45,62);
+        border: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        color: #ffffff;
+        outline: none;
+    }
+    .form-box .input-box input::placeholder{
+        text-transform: uppercase;
+    }
+    .form-box .input-box .border-box{
+        background-image: linear-gradient(to right,#e8198b,#25bcd6);
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-box .input-box .border-box .border-item{
+        height:calc(100% - 4px);
+        width: calc(100% - 4px);
+        border-radius: 30px;
+    }
+    
+    .form-box .input-box .select-box{
+        background-image: linear-gradient(to right,#e8198b,#25bcd6);
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-box .input-box .select-box select{
+        height:calc(100% - 4px);
+        width: calc(100% - 4px);
+        border-radius: 30px;
+        background-color:rgb(41,45,62);
+        text-align: center;
+        font-size: 15px;
+        color: #ffffff;
+        outline: none;
+        text-transform: uppercase;
+    }
+    
+    .form-box .buttons{
+        display: flex;
+        justify-content: center;
+    }
+    .form-box .buttons button{
+        width: 30%;
+        text-transform: uppercase;
+        border: 2px solid #0e92b3;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition:0.2s;
+        background-color: rgb(41,45,62);
+        color: #ffffff;
+    }
+
+    </style>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    
+    <script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"></script>
+   
+    
+</head>
+<body>
+<div class="form-box">
+
+    <div class="header">
+        login
+    </div>
+    <div class="input-box">
+        <center><p id="contain">Please enter username and password</p></center>
+        <div class="border-box">
+            <input id="username" type="text" name="username" placeholder="username" class="border-item">
+        </div>
+        <div class="border-box">
+            <input id="password" type="password" name="password" placeholder="password" class="border-item">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button type="button" onclick="open_win()" class="reg">REGISTER</button>&emsp;&emsp;&emsp;&emsp;
+        <button type="button" onclick="login()"class="login">LOGIN</button>
+    </div>
+    <script src="/App.js"></script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>Manage My Post</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/polyfill@7/dist/polyfill.min.js"></script>
+    <script src="https://unpkg.com/whatwg-fetch@3.0.0/dist/fetch.umd.js"></script>
+        <style>
+            .linkstep{
+                white-space:normal
+            }
+            .space{
+                position: relative;
+                left: 200px;
+            }
+            .listbody{
+                display:flex; 
+                flex-direction:row;
+                position: relative;
+                left: 200px;
+            }
+            .bookcover{
+                margin-right: 30px;
+            }
+            /* .bookdetail{
+                display: inline;
+            } */
+            .item-label{
+                font-weight: bold;
+            }
+            .keywordInput{
+                text-align: center;
+                margin: 10px;
+            }
+            .introduction{
+                width: 500px;
+            }
+            .forminput{
+                height: 20px;
+                margin: 10px;
+            }
+            .infoblock{
+                border-style: solid;
+                border-color: slategray;
+                width: 200px;
+                border-radius: 5px;
+            }
+            .postform{
+                text-align: left;
+            }
+            input[type=text]{
+                height: 20px;
+                border-radius: 5px;
+            }
+            input[type=text]:focus{
+            border: black 2px;
+            background-color: rgb(181, 226, 164);
+            }
+            input[type=submit]{
+                height: 40px;
+                border-radius: 10px;
+                background: lightcyan;
+            }
+        </style>
+    </head>
+
+    <body>
+        <center><h1>Manage My Post</h1></center>
+        <hr />
+        <div class="linkstep">
+        <span><a href="homepage.html">Home</a> > </span>  
+        <span><a href="secondBookMarket.html">Second-hand Book Market</a> > </span>
+        <span>My Post</span>
+        </div>
+        <hr />
+        <div class="space"><hr /></div>
+        <div id="myinfolist" ></div>
+        <script src="/manageinfo.js"></script>
+        
+        <div class="space"><hr /></div>
+        
+    </body>
+</html>
